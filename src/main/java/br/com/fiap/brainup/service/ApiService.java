@@ -11,7 +11,6 @@ import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 // indica que essa classe é um serviço Spring (gerenciado como Bean)
@@ -32,6 +31,7 @@ public class ApiService {
 
     //cria uma sala adicionando um jogador
     public ApiController.RoomResponse createRoom(String playerName){
+
         // cria um novo jogador com o nome recebido
         var player = new Player(playerName);
 
