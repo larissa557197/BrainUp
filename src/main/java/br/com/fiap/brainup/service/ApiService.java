@@ -23,6 +23,7 @@ public class ApiService {
     // lista thread-safe de conexões abertas via SSE (cada admin conectando ao sistema)
     private final List<SseEmitter> emitters = new CopyOnWriteArrayList<>();
 
+
     // construtor com injeção de dependencia do QuizRepository
     public ApiService(QuizRepository quizRepository) {
         this.quizRepository = quizRepository;
